@@ -1,6 +1,8 @@
 class Repo {
   constructor(repoUrl) {
     this.repoUrl = repoUrl;
+    
+    this.repos = "";
   }
 
   async getRepositories() {

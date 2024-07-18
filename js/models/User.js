@@ -1,6 +1,14 @@
 class User {
+
   constructor(user) {
     this.user = user;
+    
+    this.avatar_url = "";
+    this.followers = "";
+    this.following = "";
+    this.public_repos = "";
+    this.html_url = "";
+    this.starred_url = "";
   }
 
   async getUser() {
