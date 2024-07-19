@@ -9,6 +9,7 @@ class User {
     this.public_repos = "";
     this.html_url = "";
     this.starred_url = "";
+    this.github_location = "";
   }
 
   async getUser() {
@@ -23,7 +24,11 @@ class User {
       this.following = result.following;
       this.public_repos = result.public_repos;
       this.html_url = result.html_url;
+
+      this.github_location = result.location;
+
       this.starred_url = apiUrlStarred;
+
     } catch (error) {
       console.log(error);
     }

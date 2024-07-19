@@ -8,6 +8,7 @@ import { clearUI, elements } from "./views/base.js";
 
 const state = {};
 
+// Controller relativo aos Repositórios Favoritos
 const controlFavoriteRepositories = async (url) => {
   try {
     state.repositories = new Repo(url);
@@ -20,6 +21,7 @@ const controlFavoriteRepositories = async (url) => {
   }
 };
 
+// Controller relativo à busca e atualização do perfil
 const controlSearch = async (event) => {
   event.preventDefault();
 

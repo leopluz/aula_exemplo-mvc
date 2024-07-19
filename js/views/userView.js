@@ -6,16 +6,24 @@ export const renderUser = ({
   public_repos,
   followers,
   following,
+  github_location
 }) => {
+
+  let localizacao = "Desconhecido"
+  if (github_location !== null) {
+    localizacao = github_location;
+  }
+
   const markup = `
     <div class="profile-header">
       <img src="${avatar_url}" alt="Avatar">
       <a href="${html_url}" target="_blank">Visitar perfil</a>
-    </div>   
+    </div>
     <ul class="profile-list">
       <li>Repositórios: ${public_repos}</li>
       <li>Seguidores: ${followers}</li>
       <li>Seguindo: ${following}</li>
+      <li>Localização: ${localizacao}</li>
     </ul> 
   `;
 
